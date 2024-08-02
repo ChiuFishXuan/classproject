@@ -1,0 +1,222 @@
+body {
+    /* 清除邊界(上下左右)順時針方向 */
+    margin: 0;
+}
+.banner img{
+    width: 100%;
+}
+
+.text {
+    /* 輔助框線 */
+    /* 線條粗細 線條樣式 線條色彩 */
+    /* border: 1px; solid red; */
+    width: 1200px;
+    /* 頁面置中:(將目前視窗-現有區寬度)/2 */
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    /* 先左右切齊後，其餘平均分配 */
+    justify-content: space-between;
+    /* 先左右留白後平均分配 */
+    /* justify-content:space-around; */
+    /* 啟動flexbox-預設為水平排列 */
+    /* 縮排區域padding */
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+
+}
+
+.textbox {
+
+    width: 400px;
+    /* 水平對齊效果- 左left 右right 中center 左右對齊justify */
+    text-align: center;
+    justify-content: space-around;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+p {
+    text-align: left;
+    font-size: 20px;
+}
+
+h2 {
+    color: red;
+    font-size: 30px;
+}
+
+.slogan {
+    background-color: red;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.slogan h2 {
+    font-size: 40px;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.recommend h2 {
+    font-size: 40px;
+    color: rgb(37, 125, 37);
+    text-align: center;
+}
+
+
+
+/*課程介紹最外層*/
+.classContent {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 課程介紹內部群組 */
+.classBox {
+    width: 320px;
+    /* 外框陰影 */
+    box-shadow: 0 0 10px #00000041;
+    /* 框縣內側增加留白區 */
+    padding: 20px;
+}
+
+/* 課程介紹內部中的圖片 */
+.classBox img {
+    width: 100%;
+}
+
+.classBox h3 {
+    font-size: 30px;
+}
+
+.classBox .p1 {
+    color: rgb(40, 127, 202);
+}
+
+.classBox p {
+    color: #444444;
+    font-size: 15px;
+}
+
+
+.classBox p s {
+    color: #444444;
+}
+
+.classBox span {
+    font-size: 20px;
+    color: rgb(196, 22, 22);
+    /* 粗體字 */
+    font-weight: bold;
+}
+
+.classBox .ppp {
+    text-align: center;
+}
+
+/* .classBox a {
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    /* 因為超連結預設為行內元素：本身沒有寬高 */
+/* 所以將超連結改成區塊元素 */
+/* display: block;
+    width: 50%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* 圓角 */
+/* border-radius: 10px;  */
+/* } */
+
+/* 按鈕外觀 */
+.classBox button {
+    background-color: red;
+    color: white;
+    /* 取消邊框 */
+    border: none;
+    font-size: 20px;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+
+/* 處理按鈕位置 */
+.classBox .div-center {
+    text-align: center;
+}
+
+/* 碰到按鈕時 */
+/* 2.變底色 */
+.classBox button:hover {
+    /* 1.變成手掌形狀 */
+    cursor: pointer;
+    background-color: rgb(110, 10, 10);
+}
+
+/* 超連結碰到變色時 */
+/* .classBox a:hover { */
+/* background-color: rgb(110, 10, 10); */
+/* } */
+
+/* 響應式中尺寸變化(640-1119) */
+@media (min-width:640px)and(max-width:1119px){
+    .text{
+        width: 80%;
+    }
+    .classContent{
+        width: 80%;
+    }
+    .classBox{
+        width: 80%;
+        margin-right: 10px;
+    }
+}
+
+/* 響應式尺寸變小(639以下) */
+@media (max-width:639px){
+    #wrap{
+        /* border: 1px solid red; */
+        /* width: 400px; */
+        width: 100%;
+        margin: auto;
+    }
+
+    .banner img{
+        width: 100%;
+    }
+
+    /* 標題文字區堆疊排列 */
+    .text{
+        /* 維持flex的特性，只是改變方向 */
+        /* flex-direction: column; */
+
+        /* 純粹堆疊排列 */
+        display: block;
+        width: 80%;
+    }
+
+    .textbox{
+        /* border: 1px solid red; */
+        width: 80%;
+        margin: auto;
+    }
+
+    .classBox{
+        margin-bottom: 20px;
+        width: 90%;
+    }
+
+    .classContent{
+        width: 90%;
+        display: block;
+        margin: auto;
+    }
+}
